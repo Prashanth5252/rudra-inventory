@@ -33,7 +33,7 @@ public class ImportProductServiceImpl implements ImportProductService {
 		Sort sort = Sort.by("import_date").descending();
 		int offset = Integer.parseInt(paramMap.getOrDefault("offset", 0).toString());
 		Pageable pageable = PageRequest.of(offset, 10, sort);
-		List<ImportProduct> importProducts = (List<ImportProduct>) importProductRepo.findAll(pageable);
+		List<ImportProduct> importProducts = importProductRepo.findAll(pageable).toList();
 		return importProducts;
 	}
 
