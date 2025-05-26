@@ -13,5 +13,7 @@ public interface ProductDao {
 	public List<Map<String, Object>> getProductDetail(Map<String, Object> paramMap) throws Exception;
 
 	public List<Map<String, Object>> getProductSuggestion(Map<String, Object> paramMap) throws Exception;
+	
+	public Map<String, Object> addProductStocks(List<Map<String, Object>> upsertList) throws Exception;
 
 }

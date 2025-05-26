@@ -11,4 +11,6 @@ import com.nn.rudra.entity.importProductEntity.ImportProduct;
 public interface ImportProductService {
 
 	public List<ImportProduct> getImportProducts(Map<String, Object> paramMap);
+	
+	public Map<String, Object> saveImportProducts(List<ImportProduct> importProducts) throws Exception;
 }
